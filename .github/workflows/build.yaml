@@ -45,7 +45,7 @@ jobs:
         source /opt/ros/${{ inputs.ros_distro }}/setup.bash
         cd ${WS}/src
         rosdep update
-        rosdep install -i -y --from-paths ./
+        rosdep install -riy --from-paths ./
 
     - name: build
       run: |
