@@ -34,10 +34,11 @@ jobs:
         mkdir -p ${WS}/src
         ln -s ${GITHUB_WORKSPACE} ${WS}/src/
 
-    - name: Clone ddynamic_reconfigure2
-      run: |
-        cd ${WS}/src
-	git clone https://github.com/Automation-Research-Team/ddynamic_reconfigure2
+    - name: Checkout ddynamic_reconfigure2
+      uses: actions/checkout@v4
+      with:
+        repository: Automation-Research-Team/ddynamic_reconfigure2
+        path: ${WS}/src
 
     - name: pre build
       run: |
