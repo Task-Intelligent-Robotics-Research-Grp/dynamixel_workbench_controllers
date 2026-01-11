@@ -38,7 +38,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: Automation-Research-Team/ddynamic_reconfigure2
-        path: ${WS}/src
+        path: ddynamic_reconfigure2
 
     - name: pre build
       run: |
