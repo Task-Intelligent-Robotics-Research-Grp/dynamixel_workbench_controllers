@@ -31,6 +31,10 @@ jobs:
         sudo apt update
         sudo apt upgrade -y
 
+    - name: Install dependencies
+      run: |
+        sudo apt install nlohmann-json3-dev
+
     - name: Checkout ddynamic_reconfigure2
       uses: actions/checkout@v4
       with:
@@ -39,8 +43,8 @@ jobs:
 
     - name: Init workspace
       run: |
-        mkdir -p ${WS}/src
-        ln -s ${GITHUB_WORKSPACE} ${WS}/src/
+        mkdir ${WS}
+        ln -s ${GITHUB_WORKSPACE} ${WS}/src
 
     - name: pre build
       run: |
