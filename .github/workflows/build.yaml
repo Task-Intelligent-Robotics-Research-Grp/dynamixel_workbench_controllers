@@ -18,6 +18,8 @@ jobs:
       WS: /home/runner/work/ros2_ws
     steps:
     - uses: actions/checkout@v4
+      with:
+        path: dynamixel_workbench_controllers
 
     - name: Setup ROS
       uses: ros-tooling/setup-ros@v0.7
@@ -29,17 +31,16 @@ jobs:
         sudo apt update
         sudo apt upgrade -y
 
-    - name: Init workspace
-      run: |
-        mkdir -p ${WS}/src
-        ln -s ${GITHUB_WORKSPACE} ${WS}/src/
-
     - name: Checkout ddynamic_reconfigure2
       uses: actions/checkout@v4
       with:
         repository: Automation-Research-Team/ddynamic_reconfigure2
+        path: ddynamic_reconfigure2
+
+    - name: Init workspace
       run: |
-        cd ${WS}/src
+        mkdir -p ${WS}/src
+        ln -s ${GITHUB_WORKSPACE} ${WS}/src/
 
     - name: pre build
       run: |
