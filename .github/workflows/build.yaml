@@ -29,14 +29,15 @@ jobs:
         sudo apt update
         sudo apt upgrade -y
 
-    - name: Install dependencies
-      run: |
-        sudo apt install ros-${{ inputs.ros_distro }}-dynamixel-workbench-toolbox ros-${{ inputs.ros_distro }}-dynamixel-workbench-msgs
-
     - name: Init workspace
       run: |
         mkdir -p ${WS}/src
         ln -s ${GITHUB_WORKSPACE} ${WS}/src/
+
+    - name: Clone ddynamic_reconfigure2
+      run: |
+        cd ${WS}/src
+	git clone https://github.com/Automation-Research-Team/ddynamic_reconfigure2
 
     - name: pre build
       run: |
