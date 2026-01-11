@@ -41,7 +41,7 @@ jobs:
     - name: pre build
       run: |
         source /opt/ros/${{ inputs.ros_distro }}/setup.bash
-        cd ${WS}/src/ddynamic_reconfigure2
+        cd ${WS}/src/dynamixel_workbench_controllers
         rosdep update
         rosdep install -i -y --from-paths ./
 
