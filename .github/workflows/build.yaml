@@ -50,10 +50,8 @@ jobs:
       run: |
         source /opt/ros/${{ inputs.ros_distro }}/setup.bash
         cd ${WS}/src
-        pwd
-        ls -la
         rosdep update
-        rosdep install -riy --from-paths ./
+        rosdep install -iy --from-paths ./
 
     - name: build
       run: |

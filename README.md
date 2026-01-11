@@ -21,21 +21,28 @@ ROS1では，ROBOTIS社から[dynamixel_workbench](https://github.com/ROBOTIS-GI
 ## インストール
 本パッケージは，[Jazzy](https://docs.ros.org/en/jazzy/index.html) distributionで動作確認しています．
 
-予め，次の2つの依存パッケージをインストールしておいてください．
-```bash
-$ sudo apt install ros-jazzy-dynamixel-workbench-toolbox ros-jazzy-dynamixel-workbench-msgs
+まず最初に，[nlohmann-json](https://github.com/nlohmann/json)をインストールします．
 ```
-そして，`github`から`dynamixel_workbench_controllers`を入手し，`devel-aist`ブランチを取り出します．
+sudo apt install nlohmann-json3-dev
+```
+次に，`github`から`ddynamic_reconfigure2`を入手し，ワークスペースに展開します．
 ```bash
-$ cd ros2_ws/src
-$ git clone https://github.com/Automation-Research-Team/dynamixel_workbench_controllers
-$ cd dynamixel_workbench_controllers
-$ git checkout devel-aist
+cd ros2_ws/src
+git clone git@github.com:Automation-Research-Team/ddynamic_reconfigure2.git
+```
+そして，`github`から本パッケージを入手し，ワークスペースに展開します．
+```bash
+git clone https://github.com/Automation-Research-Team/dynamixel_workbench_controllers
+```
+さらに，`rosdep`によって依存パッケージをインストールします．
+```bash
+rosdep update
+rosdep install -iy --from-paths ./
 ```
 最後に，ワークスペース全体をコンパイルしてください．
 ```bash
-$ cd ros2_ws
-$ colcon build
+cd ros2_ws
+colcon build
 ```
 
 ## dynamixel_workbench_controllersノード
@@ -88,7 +95,7 @@ $ colcon build
 ### 起動方法
 次のコマンドを投入して起動します．
 ```bash
-$ ros2 launch dynamixel_workbench_controllers launch.py [name:=<node_name>] [param_file:=<param_file>] [container:=<container_name>] [external_container:=true]
+ros2 launch dynamixel_workbench_controllers launch.py [name:=<node_name>] [param_file:=<param_file>] [container:=<container_name>] [external_container:=true]
 ```
 - **name**: ノードに与える名前 (default: `basic_driver`)
 - **param_file**: ノードパラメータ設定ファイルへのパス (default: [default.yaml](./config/default.yaml))
