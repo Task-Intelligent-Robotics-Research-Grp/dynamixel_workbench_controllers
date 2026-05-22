@@ -1,9 +1,9 @@
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Automation-Research-Team/dynamixel_workbench_controllers)
-![GitHub](https://img.shields.io/github/license/Automation-Research-Team/dynamixel_workbench_controllers)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers)
+![GitHub](https://img.shields.io/github/license/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers)
 
 | ROS 2 Distribution | Humble                                                                                                                                                                      | Jazzy                                                                                                                                                                    |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Build Status       | [![humble-build](https://github.com/Automation-Research-Team/dynamixel_workbench_controllers/actions/workflows/humble-build.yaml/badge.svg)](https://github.com/Automation-Research-Team/dynamixel_workbench_controllers/actions/workflows/humble-build.yaml) | [![jazzy-build](https://github.com/Automation-Research-Team/dynamixel_workbench_controllers/actions/workflows/jazzy-build.yaml/badge.svg)](https://github.com/Automation-Research-Team/dynamixel_workbench_controllersactions/workflows/jazzy-build.yaml) |
+| Build Status       | [![humble-build](https://github.com/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers/actions/workflows/humble-build.yaml/badge.svg)](https://github.com/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers/actions/workflows/humble-build.yaml) | [![jazzy-build](https://github.com/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers/actions/workflows/jazzy-build.yaml/badge.svg)](https://github.com/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllersactions/workflows/jazzy-build.yaml) |
 
 dynamixel_workbench_controllers
 ==================================================
@@ -28,11 +28,11 @@ sudo apt install nlohmann-json3-dev
 次に，`github`から`ddynamic_reconfigure2`を入手し，ワークスペースに展開します．
 ```bash
 cd ros2_ws/src
-git clone git@github.com:Automation-Research-Team/ddynamic_reconfigure2.git
+git clone git@github.com:Task-Intelligent-Robotics-Research-Grp/ddynamic_reconfigure2.git
 ```
 そして，`github`から本パッケージを入手し，ワークスペースに展開します．
 ```bash
-git clone https://github.com/Automation-Research-Team/dynamixel_workbench_controllers
+git clone https://github.com/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers
 ```
 さらに，`rosdep`によって依存パッケージをインストールします．
 ```bash
@@ -103,4 +103,4 @@ ros2 launch dynamixel_workbench_controllers launch.py [name:=<node_name>] [param
 - **external_container**: `true`ならば，`container`に指定した名前で別途起動していた既存のコンテナにロード．`false`ならば，`container`に指定した名前で新たにコンテナを起動し，それにロード (default: `false`)
 
 ## dynamixel_workbench_controllersの使用例
-本ノードが提供するサービス `~/dynamixel_command` を利用して，Dynamixelモーターによって駆動される2指グリッパを制御するコントローラ [precision_tool_controller](https://github.com/Automation-Research-Team/artros/blob/ros2-devel/aist_fastening_tools/src/precision_tool_controller.cpp) がありますので．ご参照ください．
+本ノードが提供するサービス `~/dynamixel_command` を利用して，Dynamixelモーターによって駆動される2指グリッパを制御するコントローラ [precision_tool_controller](https://github.com/Task-Intelligent-Robotics-Research-Grp/artros/blob/ros2-devel/aist_fastening_tools/src/precision_tool_controller.cpp) がありますので．ご参照ください．
