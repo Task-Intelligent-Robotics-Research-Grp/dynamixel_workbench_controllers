@@ -1,5 +1,5 @@
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers)
-![GitHub](https://img.shields.io/github/license/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers)
+![GitHub Release](https://img.shields.io/github/v/release/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers)
+![GitHub License](https://img.shields.io/github/license/Task-Intelligent-Robotics-Research-Grp/dynamixel_workbench_controllers)
 
 | ROS 2 Distribution | Humble                                                                                                                                                                      | Jazzy                                                                                                                                                                    |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
