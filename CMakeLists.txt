@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.20)
 project(dynamixel_workbench_controllers)
 
 if(NOT CMAKE_C_STANDARD)
@@ -27,11 +27,6 @@ ament_auto_add_library(
   ${PROJECT_NAME} SHARED
     src/dynamixel_workbench_controllers.cpp
     src/trajectory_generator.cpp
-)
-
-ament_target_dependencies(
-  ${PROJECT_NAME}
-    YAML-CPP
 )
 
 rclcpp_components_register_node(
