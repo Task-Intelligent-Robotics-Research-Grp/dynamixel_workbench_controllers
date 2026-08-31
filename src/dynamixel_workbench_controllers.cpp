@@ -20,7 +20,7 @@
 
 #include <filesystem>
 #include <yaml-cpp/yaml.h>
-#include <ament_index_cpp/get_package_share_directory.hpp>
+#include <ament_index_cpp/get_package_share_path.hpp>
 
 #include <sensor_msgs/msg/joint_state.hpp>
 #include <geometry_msgs/msg/twist.hpp>
@@ -67,7 +67,7 @@ filepath_from_url(const std::string& url)
 
     std::filesystem::path	path;
     if (tokens[0] == "package:")
-        path = ament_index_cpp::get_package_share_directory(tokens[2]);
+        path = ament_index_cpp::get_package_share_path(tokens[2]);
     else if (tokens[0] == "file:")
         path = "/";
     else
