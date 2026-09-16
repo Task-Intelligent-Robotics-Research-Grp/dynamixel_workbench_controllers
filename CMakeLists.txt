@@ -31,6 +31,11 @@ ament_auto_add_library(
     src/trajectory_generator.cpp
 )
 
+target_link_libraries(
+  ${PROJECT_NAME}
+    ${YAML-CPP_LIBRARIES}
+)
+
 rclcpp_components_register_node(
   ${PROJECT_NAME}
     PLUGIN     ${PROJECT_NAME}::DynamixelController
